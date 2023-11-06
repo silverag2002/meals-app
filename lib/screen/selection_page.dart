@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/data/dummy_data.dart';
+import 'package:meals_app/screen/recepie.dart';
 
 class SelectionScreen extends StatelessWidget {
   SelectionScreen({super.key});
 
   @override
   Widget build(context) {
+    void navigateToScreen(cat) {
+      var dMeals = dummyMeals
+          .where((element) => element.categories.contains(cat.id))
+          .toList();
+      print("DMEALS   ${dMeals[0]}");
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (ctx) => Recepie(title: cat.title, data: dMeals)));
+    }
+
     return Scaffold(
         appBar: AppBar(
           title: const Text("Pick your Category"),
@@ -21,7 +31,7 @@ class SelectionScreen extends StatelessWidget {
             for (final category in availableCategories)
               InkWell(
                   onTap: () {
-                    print(category.title);
+                    navigateToScreen(category);
                   },
                   splashColor: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(16),
