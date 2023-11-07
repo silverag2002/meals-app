@@ -11,7 +11,8 @@ class SelectionScreen extends StatelessWidget {
       var dMeals = dummyMeals
           .where((element) => element.categories.contains(cat.id))
           .toList();
-      print("DMEALS   ${dMeals[0]}");
+      print("LENGTH ${dMeals.length}");
+
       Navigator.of(context).push(MaterialPageRoute(
           builder: (ctx) => Recepie(title: cat.title, data: dMeals)));
     }
