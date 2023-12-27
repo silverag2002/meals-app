@@ -16,13 +16,22 @@ class Recepie extends StatelessWidget {
           child: ListView.builder(
               itemCount: data.length,
               itemBuilder: (ctx, index) => Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  margin: const EdgeInsets.all(16),
+                  elevation: 2,
+                  clipBehavior: Clip.hardEdge,
                   child: InkWell(
                       onTap: () {},
                       child: Stack(
                         children: [
                           FadeInImage(
-                              placeholder: MemoryImage(kTransparentImage),
-                              image: NetworkImage(data[index].imageUrl)),
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: NetworkImage(data[index].imageUrl),
+                            fit: BoxFit.cover,
+                            height: 200,
+                            width: double.infinity,
+                          ),
                           Positioned(
                               bottom: 0,
                               right: 0,
