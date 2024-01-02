@@ -44,6 +44,8 @@ class Recepie extends StatelessWidget {
                               right: 0,
                               left: 0,
                               child: Container(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 5.0),
                                 decoration:
                                     const BoxDecoration(color: Colors.black54),
                                 child: Column(
@@ -59,7 +61,7 @@ class Recepie extends StatelessWidget {
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    const SizedBox(height: 12),
+                                    const SizedBox(height: 6),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
