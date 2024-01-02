@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/meals.dart';
+import 'package:meals_app/screen/procedure.dart';
 import 'package:meals_app/widgets/meals_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -29,7 +30,11 @@ class Recepie extends StatelessWidget {
                   elevation: 2,
                   clipBehavior: Clip.hardEdge,
                   child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        print("DATA '${data[index].title}'");
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => Procedure(meal: data[index])));
+                      },
                       child: Stack(
                         children: [
                           FadeInImage(
