@@ -8,9 +8,13 @@ class MealsTrait extends StatelessWidget {
   Widget build(context) {
     return (Row(
       children: [
-        Icon(icon),
+        Icon(
+          icon,
+          size: 17,
+          color: Colors.white,
+        ),
         const SizedBox(
-          width: 6,
+          width: 4,
         ),
         Text(
           duration,
