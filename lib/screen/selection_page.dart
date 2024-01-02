@@ -45,9 +45,7 @@ class SelectionScreen extends StatelessWidget {
                                 category.color.withOpacity(0.9)
                               ],
                               begin: Alignment.topLeft,
-                              end: Alignment.bottomRight)
-                          // borderRadius: BorderRadius.circular(16)),
-                          ),
+                              end: Alignment.bottomRight)),
                       padding: const EdgeInsets.all(16),
                       child: Text(
                         category.title,
