@@ -16,6 +16,10 @@ class Recepie extends StatelessWidget {
 
   @override
   Widget build(context) {
+    if (data.isEmpty) {
+      return Text("No results", style: TextStyle(color: Colors.white));
+    }
+
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
