@@ -17,7 +17,11 @@ class Recepie extends StatelessWidget {
   @override
   Widget build(context) {
     if (data.isEmpty) {
-      return Text("No results", style: TextStyle(color: Colors.white));
+      return const Text(
+        "No results",
+        textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.white),
+      );
     }
 
     return Scaffold(
