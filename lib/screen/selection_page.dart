@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/data/dummy_data.dart';
 import 'package:meals_app/screen/dashboard.dart';
 import 'package:meals_app/screen/recepie.dart';
-import 'package:meals_app/widgets/meals_trait.dart';
+import 'package:meals_app/screen/main_drawer.dart';
 
 class SelectionScreen extends StatefulWidget {
   SelectionScreen({super.key});
@@ -34,6 +34,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
         title: Text(finalTitle),
       ),
       body: displayScreen,
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedNavItem,
         items: [
